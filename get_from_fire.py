@@ -18,6 +18,7 @@ def get_data():
     date_st = datetime.datetime.now().timestamp() - 31500 - 86400
     date_fn = date_st + 86400
     list_of_yest_numbers = []
+    # i was probably super high when i did this but it's so hilarious i'm keeping it
     for id in ids_of_psdlk:
         i = 0
         chuvak_messages = messages.where(u'from_id',u'==',id).where(u'date',u'>',date_st).where(u'date',u'<',date_fn).stream()

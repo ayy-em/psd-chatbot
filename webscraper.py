@@ -19,11 +19,9 @@ def get_weather_for_posidelki():
     # returns weather string
     dtnow = datetime.now()
     str_todayy = str(dtnow.day) + '/' + str(dtnow.month) + '/' + str(dtnow.year)
-    newyear = datetime(2020,1,1)
-    ddiff = newyear - dtnow
-    ult_fin_hi = '\nСегодня ' + str_todayy + '. До НГ ' + str(ddiff.days) + ' дней.'
+    ult_fin_hi = '\nСегодня ' + str_todayy + ' и мы в новом десятилетии.'
     # returns a big string
-    megaweatherstring = 'Утро доброе.' + ult_fin_hi + '\n\n *Погода:*\n' +  get_weather_city('Moscow', 'RU') + get_weather_city('Amsterdam', 'RU') + get_weather_city('Sochi', 'RU') + '\n'
+    megaweatherstring = 'Утро доброе.' + ult_fin_hi + '\n\n\t*Погода:*\n' +  get_weather_city('Moscow', 'RU') + get_weather_city('Amsterdam', 'RU') + get_weather_city('Sochi', 'RU') + '\n'
     return megaweatherstring
 
 
